@@ -2,7 +2,7 @@ FROM alpine:3.6
 
 MAINTAINER Hortonworks
 
-ENV HELM_VERSION="v2.11.0"
+ENV HELM_VERSION="v2.10.0"
 
 RUN apk add --update ca-certificates \
  && apk add --update -t deps wget \
