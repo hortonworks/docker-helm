@@ -2,11 +2,11 @@ FROM alpine:3.6
 
 MAINTAINER Hortonworks
 
-ENV HELM_VERSION="v2.11.0"
+ENV HELM_VERSION="v3.9.4"
 
 RUN apk add --update ca-certificates \
  && apk add --update -t deps wget \
- && wget http://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz \
+ && wget https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz \
  && tar -xvf helm-${HELM_VERSION}-linux-amd64.tar.gz \
  && mv linux-amd64/helm /usr/local/bin \
  && apk del --purge deps \
